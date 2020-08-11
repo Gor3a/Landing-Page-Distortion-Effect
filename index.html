@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="overlay overlay1"></div>
+    <div class="overlay overlay2"></div>
+    <div class="overlay overlay3"></div>
+    
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="menu">
+                <ion-icon name="ios-menu"></ion-icon>
+            </div>
+            <div class="lang">eng</div>
+            <div class="search">
+                <ion-icon name="ios-search"></ion-icon>
+            </div>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li>facebook</li>
+                <li>instagram</li>
+                <li>twitter</li>
+            </ul>
+        </div>
+
+        <div class="text">
+            <h1>
+                <span class="hideset">
+                    toni&guy
+                </span>
+            </h1>
+            <h3><span class="hideset">
+                collection 2017 <br> duality
+            </span></h3>
+            <p>
+                <span class="hideset">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit quo delectus ratione deleniti, exercitationem dicta! Facere, sit? Cupiditate, possimus ullam quae rem ratione, aliquam corrupti, fuga nihil quidem dolore vitae?
+                </span>
+            </p>
+        </div>
+
+        <div class="sponsor">
+            <div class="img">
+                <span class="hideset">
+                    <img src="./images/london_fashion_week_logo.png" alt="">
+                </span>
+            </div>
+            <div class="sp_name"><span class="hideset">
+                <p>official sponser</p>
+            </span></div>
+        </div>
+        
+        <div class="distartion">
+
+        </div>
+        
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js" integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.min.js" integrity="sha512-E1+SnTWyHYoY5MN8wpL0SI4TYbpWN12sHXyEViwbzzEyq6GHxQrPFDzEeUDab4emXcf3Yj41Tht2JZnpo3kjwA==" crossorigin="anonymous"></script>
+    <script src="./js/hover-effect.umd.js"></script>
+    <script>
+        new hoverEffect({
+            parent: document.querySelector(".distartion"),
+            intensity: 0.2,
+            image1: './images/01.png',
+            image2: './images/02.png',
+            displacementImage: './images/diss.png',
+            imagesRatio:380 / 300
+        })
+
+
+        TweenMax.to(".overlay1", 1.5, {
+            delay:0.5,
+            top:"-100%",
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.to(".overlay2", 1.5, {
+            delay:0.6,
+            top:"-100%",
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.to(".overlay3", 1.5, {
+            delay:0.7,
+            top:"-100%",
+            ease:Expo.easeInOut
+        })
+        
+        TweenMax.from(".text h1", 1.5,{
+            delay: 1.5,
+            x:"-100%",
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".text h3 .hideset", 1.5,{
+            delay: 1.5,
+            y:"100%",
+            opacity:0,
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".text p .hideset", 1.5,{
+            delay: 1.7,
+            y:"100%",
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".sponsor .img .hideset", 1.5,{
+            delay: 1.7,
+            y:"110%",
+            ease:Expo.easeInOut
+        })
+
+        TweenMax.from(".sponsor .sp_name .hideset", 1.5,{
+            delay: 1.7,
+            y:"110%",
+            ease:Bounce.easeOut
+        })
+
+        TweenMax.staggerFrom(".media ul li", 1.5,{
+            delay: 1.5,
+            opacity:0,
+            x:"-20",
+            ease:Expo.easeInOut
+        }, 0.08)
+        
+
+        TweenMax.staggerFrom(".navbar div", 1.5,{
+            delay: 1.5,
+            opacity:0,
+            y:"-20",
+            ease:Expo.easeInOut
+        }, 0.08)
+    </script>
+</body>
+</html>
